@@ -1,6 +1,6 @@
 {
   "name": "blue-moon-raptors",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Website for Blue Moon Raptors organizational, a rehabilitational organizaiton for birds of prey.",
   "main": "index.js",
   "scripts": {

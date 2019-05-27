@@ -11,7 +11,9 @@ const programImageSlider = () => {
 
   // update image URL
   for (let count=0; count < images.length; count++) {
-    images[count].original = _config.assetBucket + images[count].original;
+    if (images[count].original.indexOf(_config.assetBucket) <= -1) {
+      images[count].original = _config.assetBucket + images[count].original;
+    }
   }
 
   return (<ImageGallery items={images} autoPlay={autoPlay} />);

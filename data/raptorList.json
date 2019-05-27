@@ -1,0 +1,43 @@
+{
+    "raptorArray": [{
+            "name": "Ash",
+            "imageUrl": "raptors/ash.jpg",
+            "description": "This is Ash"
+        },
+        {
+            "name": "Aviana",
+            "imageUrl": "raptors/aviana.jpg",
+            "description": "This is Aviana"
+        },
+        {
+            "name": "Cedar",
+            "imageUrl": "raptors/cedar.jpg",
+            "description": "This is Cedar"
+        },
+        {
+            "name": "Chase",
+            "imageUrl": "raptors/chase.jpg",
+            "description": "This is Chase"
+        },
+        {
+            "name": "Fyn",
+            "imageUrl": "raptors/fyn.jpg",
+            "description": "This is Fyn"
+        },
+        {
+            "name": "Kai",
+            "imageUrl": "raptors/kai.jpg",
+            "description": "This is Kai"
+        },
+        {
+            "name": "Myles",
+            "imageUrl": "raptors/myles.jpg",
+            "description": "This is Myles"
+        },
+        {
+            "name": "Onyx",
+            "imageUrl": "raptors/onyx.jpg",
+            "description": "This is Onyx"
+        }
+    ]
+}

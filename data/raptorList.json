@@ -20,11 +20,6 @@
             "description": "This is Chase"
         },
         {
-            "name": "Fyn",
-            "imageUrl": "raptors/fyn.jpg",
-            "description": "This is Fyn"
-        },
-        {
             "name": "Kai",
             "imageUrl": "raptors/kai.jpg",
             "description": "This is Kai"
@@ -33,11 +28,6 @@
             "name": "Myles",
             "imageUrl": "raptors/myles.jpg",
             "description": "This is Myles"
-        },
-        {
-            "name": "Onyx",
-            "imageUrl": "raptors/onyx.jpg",
-            "description": "This is Onyx"
         }
     ]
 }

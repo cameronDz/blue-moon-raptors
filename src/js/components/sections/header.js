@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,22 +12,19 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import * as _headerLinks from '../../../../data/headerLinks.json';
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-    paddingBottom: '10px'
-  },
   grow: {
     flexGrow: 1,
+  },
+  links: {
+    color: '#ffffff'
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
   },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+  root: {
+    backgroundColor: '#000080',
+    width: '100%'
   },
   sectionDesktop: {
     display: 'none',
@@ -41,6 +38,12 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    },
+  }
 });
 
 class headerSection extends React.Component {
@@ -49,22 +52,13 @@ class headerSection extends React.Component {
     mobileMoreAnchorEl: null
   };
 
-  handleProfileMenuOpen = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
   handleMenuClose = () => {
     this.setState({ anchorEl: null });
     this.handleMobileMenuClose();
   };
 
-  handleMobileMenuOpen = event => {
-    this.setState({ mobileMoreAnchorEl: event.currentTarget });
-  };
-
-  handleMobileMenuClose = () => {
-    this.setState({ mobileMoreAnchorEl: null });
-  };
+  handleMobileMenuOpen = event => this.setState({ mobileMoreAnchorEl: event.currentTarget });
+  handleMobileMenuClose = () => this.setState({ mobileMoreAnchorEl: null });
 
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
@@ -72,82 +66,62 @@ class headerSection extends React.Component {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const renderMenu = (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={this.handleMenuClose}
-      >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
-      </Menu>
-    );
-
     const renderAllIconLinks = () => {
       return _headerLinks.items.map((item, index) => {
         return (
           <IconButton color="inherit" key={index}>
-            <Link to={item.link}>{item.displayName}</Link>
+            <Link className={classes.links} to={item.link}>{item.displayName}</Link>
           </IconButton>);
       });
     };
-
-    const renderIconSection = (
-      <React.Fragment>
-        {renderAllIconLinks()}
-      </React.Fragment>
-    );
 
     const renderAllMenuLinks = () => {
       return _headerLinks.items.map((item, index) => {
         return (
           <MenuItem key={index} onClick={this.handleMobileMenuClose}>
-            <Link to={item.link}><p>{item.displayName}</p></Link>
+            <Link to={item.link}><p className={classes.links}>{item.displayName}</p></Link>
           </MenuItem>);
       });
     };
   
-    const renderMobileMenu = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMobileMenuOpen}
-        onClose={this.handleMenuClose}
-      >
-        {renderAllMenuLinks()}
-      </Menu>
-    );
+    const rendeMenu = (anchor, isOpen) => {
+      return (
+        <Menu anchorEl={anchor}
+          anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
+          onClose={this.handleMenuClose}
+          open={isOpen}
+          transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+        >
+          {renderAllMenuLinks()}
+        </Menu>);
+    };
+
+    const renderDesktopMenu = rendeMenu(anchorEl, isMenuOpen);
+    const renderMobileMenu = rendeMenu(mobileMoreAnchorEl, isMobileMenuOpen);
 
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
+      <React.Fragment>
+        <AppBar className={classes.root} position="static">
           <Toolbar>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+            <Typography className={classes.title} color="inherit" noWrap variant="h6">
               Blue Moon Raptures
             </Typography>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              {renderIconSection}
+              {renderAllIconLinks()}
             </div>
             <div className={classes.sectionMobile}>
-              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+              <IconButton aria-haspopup="true" color="inherit" onClick={this.handleMobileMenuOpen}>
                 <MoreIcon />
               </IconButton>
             </div>
           </Toolbar>
         </AppBar>
-        {renderMenu}
+        {renderDesktopMenu}
         {renderMobileMenu}
-      </div>
-    );
+      </React.Fragment>);
   }
 }
 
-headerSection.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
+headerSection.propTypes = { classes: PropTypes.object.isRequired };
 export default withStyles(styles)(headerSection);

@@ -17,3 +17,5 @@ Application is currently deployed to http://blue-moon-raptors.s3-website-us-east
 - [ ] Set asset project up in source control and on a server
 - [ ] Add deployment details
 - [ ] Add project structure
+- [ ] Move pages/ to ../containers/
+- [ ] Re-org /components/sections/

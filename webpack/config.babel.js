@@ -1,11 +1,9 @@
 import HtmlWebPackPlugin from 'html-webpack-plugin';
-import {
-  DefinePlugin
-} from 'webpack';
+import { DefinePlugin } from 'webpack';
 
 module.exports = {
   devServer: {
-    contentBase: '../',
+    contentBase: '.',
     hot: true
   },
   devtool: 'inline-source-map',
@@ -42,7 +40,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: __dirname + './../dist',
+    path: __dirname + '/dist',
     publicPath: '/'
   },
   plugins: [

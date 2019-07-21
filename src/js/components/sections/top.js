@@ -7,11 +7,12 @@ import * as _config from '../../../../data/config.json';
 
 const styles = {
   image: {
-    "width": "100%"
+    width: '100%'
   },
   title: {
-    "textAlign": "center",
-    "fontSize": "24px"
+    fontSize: '24px',
+    paddingTop: '16px',
+    textAlign: 'center'
   }
 };
 

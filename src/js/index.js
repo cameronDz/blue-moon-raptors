@@ -4,10 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/app';
 
 ReactDOM.render(
-  <React.Fragment>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.Fragment>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('blue-moon-raptors-app')
 );

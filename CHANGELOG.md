@@ -8,8 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0] - 2019-09-15
 ### Added
-- Added eslint with linter command and standard/react plugins/extensions
-- Added CHANGELOG and LICENSE
+- PropType declarations on components recieving props
+- ESLint with linter command and standard/react plugins/extensions
+- CHANGELOG and LICENSE
 
 ### Changed
 - Deconstructing props in method params

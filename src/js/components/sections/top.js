@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -16,6 +17,7 @@ const styles = {
   }
 };
 
+const propTypes = { classes: PropTypes.object };
 const topSection = ({ classes }) => {
   const imageUrl = _config.assetBucket + _homeImages.header.imageUrl;
   return (
@@ -31,4 +33,5 @@ const topSection = ({ classes }) => {
     </Grid>);
 };
 
+topSection.propTypes = propTypes;
 export default withStyles(styles)(topSection);

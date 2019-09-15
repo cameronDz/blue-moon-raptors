@@ -20,7 +20,6 @@ const styles = {
 };
 
 const homeBottomSection = ({ classes }) => {
-
   return (
     <Fragment>
       <Grid container spacing={0}>
@@ -42,8 +41,8 @@ const homeBottomSection = ({ classes }) => {
           <CircularImage details={_homeImages.birds} />
         </Grid>
         <Hidden mdUp>
-        <Grid item xs={12} sm={1}></Grid>
-        <Grid item xs={12} sm={1}></Grid>
+          <Grid item xs={12} sm={1}></Grid>
+          <Grid item xs={12} sm={1}></Grid>
         </Hidden>
         <Grid item xs={12} sm={5} md={2}>
           <CircularImage details={_homeImages.mission} />

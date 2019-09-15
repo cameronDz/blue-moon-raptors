@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 
 const support = () => {
-
   return (
     <Fragment>
       <h1>Support</h1>

@@ -11,6 +11,7 @@
   "scripts": {
     "build": "webpack --mode production --config webpack/config.babel.js",
     "lint": "eslint ./src/js/",
+    "lint-fix": "eslint --fix ./src/js/",
     "start": "webpack-dev-server --open --mode development --config webpack/config.babel.js"
   },
   "dependencies": {

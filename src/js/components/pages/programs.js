@@ -5,7 +5,6 @@ import ProgramImageSlider from '../sections/programImageSlider';
 import ProgramsList from '../sections/programsList';
 
 const programs = () => {
-
   return (
     <Fragment>
       <Grid container spacing={0}>

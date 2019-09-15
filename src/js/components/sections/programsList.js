@@ -13,13 +13,13 @@ const programsList = () => {
     });
   };
 
-  return(
-  <Fragment>
-    <div>Program Types:</div>
-    <ul>
-      {renderProgramList()}
-    </ul>
-  </Fragment>)
-}
+  return (
+    <Fragment>
+      <div>Program Types:</div>
+      <ul>
+        {renderProgramList()}
+      </ul>
+    </Fragment>);
+};
 
 export default programsList;

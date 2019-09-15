@@ -6,7 +6,6 @@ import * as _config from '../../../../data/config.json';
 import * as _raptorList from '../../../../data/raptorList.json';
 
 const birdCardSlider = () => {
-
   const raptorArray = _raptorList.raptorArray;
   const assetBaseUrl = _config.assetBucket;
 

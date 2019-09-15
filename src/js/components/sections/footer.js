@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 
 const styles = {
@@ -14,12 +15,13 @@ const styles = {
   }
 };
 
-const footerSection = props => {
-  const { classes } = props;
+const propTypes = { classes: PropTypes.object };
+const footerSection = ({ classes }) => {
   return (
     <div className={classes.footer}>
       <p className={classes.text}>Blue Moon Raptures</p>
     </div>);
 };
 
+footerSection.propTypes = propTypes;
 export default withStyles(styles)(footerSection);

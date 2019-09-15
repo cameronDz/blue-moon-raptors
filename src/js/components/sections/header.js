@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,14 +13,14 @@ import * as _headerLinks from '../../../../data/headerLinks.json';
 
 const styles = theme => ({
   grow: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   links: {
     color: '#ffffff'
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   root: {
     backgroundColor: '#000080',
@@ -29,24 +29,24 @@ const styles = theme => ({
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
+      display: 'flex'
+    }
   },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   title: {
     display: 'none',
     [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+      display: 'block'
+    }
   }
 });
 
-class headerSection extends React.Component {
+class HeaderSection extends Component {
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null
@@ -60,7 +60,7 @@ class headerSection extends React.Component {
   handleMobileMenuOpen = event => this.setState({ mobileMoreAnchorEl: event.currentTarget });
   handleMobileMenuClose = () => this.setState({ mobileMoreAnchorEl: null });
 
-  render() {
+  render () {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
     const isMenuOpen = Boolean(anchorEl);
@@ -83,7 +83,7 @@ class headerSection extends React.Component {
           </MenuItem>);
       });
     };
-  
+
     const rendeMenu = (anchor, isOpen) => {
       return (
         <Menu anchorEl={anchor}
@@ -100,7 +100,7 @@ class headerSection extends React.Component {
     const renderMobileMenu = rendeMenu(mobileMoreAnchorEl, isMobileMenuOpen);
 
     return (
-      <React.Fragment>
+      <Fragment>
         <AppBar className={classes.root} position="static">
           <Toolbar>
             <Typography className={classes.title} color="inherit" noWrap variant="h6">
@@ -119,9 +119,9 @@ class headerSection extends React.Component {
         </AppBar>
         {renderDesktopMenu}
         {renderMobileMenu}
-      </React.Fragment>);
+      </Fragment>);
   }
 }
 
-headerSection.propTypes = { classes: PropTypes.object.isRequired };
-export default withStyles(styles)(headerSection);
+HeaderSection.propTypes = { classes: PropTypes.object.isRequired };
+export default withStyles(styles)(HeaderSection);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/home';
@@ -10,7 +10,7 @@ import SupportPage from './pages/support';
 
 const app = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/education' component={EducationPage} />
@@ -20,7 +20,7 @@ const app = () => {
         <Route exact path='/raptors' component={RaptorsPage} />
         <Route exact path='/support' component={SupportPage} />
       </Switch>
-    </React.Fragment>);
+    </Fragment>);
 };
 
 export default app;

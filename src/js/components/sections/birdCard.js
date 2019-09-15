@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
@@ -7,15 +7,12 @@ const styles = {
   }
 };
 
-const birdCard = props => {
-  const { classes, image, title } = props;
-
-  return (!!image && !!title)
-    ? (<React.Fragment>
-        <h1>{title}</h1>
-        <img className={classes.card} src={image} />
-      </React.Fragment>)
-    : false;
+const birdCard = ({ classes, image, title }) => {
+  return (!!image && !!title) && (
+    <Fragment>
+      <h1>{title}</h1>
+      <img className={classes.card} src={image} />
+    </Fragment>);
 };
 
 export default withStyles(styles)(birdCard);

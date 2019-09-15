@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
@@ -19,11 +20,10 @@ const styles = {
   }
 };
 
-const homeBottomSection = props => {
-  const { classes } = props;
-
+const propTypes = { classes: PropTypes.object };
+const homeBottomSection = ({ classes }) => {
   return (
-    <React.Fragment>
+    <Fragment>
       <Grid container spacing={0}>
         <Grid item xs={12} sm={3}></Grid>
         <Grid item xs={12} sm={6}>
@@ -43,8 +43,8 @@ const homeBottomSection = props => {
           <CircularImage details={_homeImages.birds} />
         </Grid>
         <Hidden mdUp>
-        <Grid item xs={12} sm={1}></Grid>
-        <Grid item xs={12} sm={1}></Grid>
+          <Grid item xs={12} sm={1}></Grid>
+          <Grid item xs={12} sm={1}></Grid>
         </Hidden>
         <Grid item xs={12} sm={5} md={2}>
           <CircularImage details={_homeImages.mission} />
@@ -54,7 +54,8 @@ const homeBottomSection = props => {
         </Grid>
         <Grid item xs={12} sm={1} md={2}></Grid>
       </Grid>
-    </React.Fragment>);
+    </Fragment>);
 };
 
+homeBottomSection.propTypes = propTypes;
 export default withStyles(styles)(homeBottomSection);

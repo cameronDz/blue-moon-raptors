@@ -1,17 +1,12 @@
-import React from 'react';
-import FooterSection from '../sections/footer';
-import HeaderSection from '../sections/header';
+import React, { Fragment } from 'react';
 
 const education = () => {
-
   return (
-    <React.Fragment>
-      <HeaderSection />
+    <Fragment>
       <h1>Education</h1>
-      <div>Educational resources.</div>
-      <FooterSection />
-    </React.Fragment>
-  )
+      <p>Educational resources.</p>
+      <p>Under construction</p>
+    </Fragment>);
 };
 
 export default education;

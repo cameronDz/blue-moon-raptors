@@ -1,5 +1,6 @@
 import HtmlWebPackPlugin from 'html-webpack-plugin';
 import { DefinePlugin } from 'webpack';
+import { resolve } from 'path';
 
 module.exports = {
   devServer: {
@@ -7,46 +8,46 @@ module.exports = {
     hot: true
   },
   devtool: 'inline-source-map',
-  entry: './src/js/index.js',
+  entry: resolve(__dirname, '..', './src/js/index.js'),
   mode: 'development',
   module: {
     rules: [{
-        test: /\.(js)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
-      },
-      {
-        test: /\.html$/,
-        use: [{
-          loader: "html-loader"
-        }]
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
-        ]
+      test: /\.(js)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader'
       }
+    },
+    {
+      test: /\.html$/,
+      use: [{
+        loader: 'html-loader'
+      }]
+    },
+    {
+      test: /\.(png|svg|jpg|gif)$/,
+      use: [
+        'file-loader'
+      ]
+    },
+    {
+      test: /\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        { loader: 'css-loader' }
+      ]
+    }
     ]
   },
   output: {
     filename: 'bundle.js',
-    path: __dirname + '/dist',
+    path: resolve(__dirname, '..', './dist'),
     publicPath: '/'
   },
   plugins: [
     new HtmlWebPackPlugin({
-      filename: "./index.html",
-      template: "./src/index.html"
+      filename: resolve(__dirname, '..', './dist/index.html'),
+      template: resolve(__dirname, '..', './src/index.html')
     }),
     new DefinePlugin({
       'process.env': {

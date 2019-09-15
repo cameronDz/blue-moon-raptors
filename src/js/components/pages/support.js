@@ -1,14 +1,12 @@
-import React from 'react';
-import FooterSection from '../sections/footer';
-import HeaderSection from '../sections/header';
+import React, { Fragment } from 'react';
 
 const support = () => {
-
   return (
-    <React.Fragment>
-      <HeaderSection />
-      <FooterSection />
-    </React.Fragment>);
+    <Fragment>
+      <h1>Support</h1>
+      <p>Support information.</p>
+      <p>Under construction</p>
+    </Fragment>);
 };
 
 export default support;

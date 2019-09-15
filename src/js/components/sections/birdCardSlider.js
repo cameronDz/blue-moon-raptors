@@ -6,7 +6,6 @@ import * as _config from '../../../../data/config.json';
 import * as _raptorList from '../../../../data/raptorList.json';
 
 const birdCardSlider = () => {
-
   const raptorArray = _raptorList.raptorArray;
   const assetBaseUrl = _config.assetBucket;
 
@@ -26,12 +25,9 @@ const birdCardSlider = () => {
   };
 
   return (
-    <React.Fragment>
-      <Grid container spacing={0}>
-        {renderCardArray()}
-      </Grid>
-    </React.Fragment>
-  );
+    <Grid container spacing={0}>
+      {renderCardArray()}
+    </Grid>);
 };
 
 export default birdCardSlider;

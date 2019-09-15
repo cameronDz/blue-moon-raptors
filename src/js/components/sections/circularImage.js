@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
 import * as _config from '../../../../data/config.json';
 
 const styles = {
@@ -26,8 +26,12 @@ const styles = {
   }
 };
 
-const circularImage = props => {
-  const { classes, details } = props;
+const propTypes = {
+  classes: PropTypes.object,
+  details: PropTypes.object
+};
+
+const circularImage = ({ classes, details }) => {
   const imageUrl = _config.assetBucket + details.imageUrl;
 
   return (
@@ -38,4 +42,5 @@ const circularImage = props => {
     </div>);
 };
 
+circularImage.propTypes = propTypes;
 export default withStyles(styles)(circularImage);

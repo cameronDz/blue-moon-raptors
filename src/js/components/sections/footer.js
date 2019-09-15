@@ -14,8 +14,7 @@ const styles = {
   }
 };
 
-const footerSection = props => {
-  const { classes } = props;
+const footerSection = ({ classes }) => {
   return (
     <div className={classes.footer}>
       <p className={classes.text}>Blue Moon Raptures</p>

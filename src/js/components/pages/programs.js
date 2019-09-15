@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import FooterSection from '../sections/footer';
-import HeaderSection from '../sections/header';
 import ProgramImageSlider from '../sections/programImageSlider';
 import ProgramsList from '../sections/programsList';
 
 const programs = () => {
 
   return (
-    <React.Fragment>
-      <HeaderSection />
+    <Fragment>
       <Grid container spacing={0}>
         <Grid item xs={12} sm={3}></Grid>
         <Grid item xs={12} sm={6}>
@@ -23,8 +20,7 @@ const programs = () => {
         </Grid>
         <Grid item xs={12} sm={2}></Grid>
       </Grid>
-      <FooterSection />
-    </React.Fragment>
+    </Fragment>
   );
 };
 

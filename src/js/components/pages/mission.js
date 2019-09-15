@@ -1,16 +1,12 @@
-import React from 'react';
-import FooterSection from '../sections/footer';
-import HeaderSection from '../sections/header';
+import React, { Fragment } from 'react';
 import * as _missionStatment from '../../../../data/missionStatements.json';
 
 const mission = () => {
   return (
-    <React.Fragment>
-      <HeaderSection />
+    <Fragment>
       <div>Mission Statement</div>
       <div>{_missionStatment.full}</div>
-      <FooterSection />
-    </React.Fragment>);
+    </Fragment>);
 };
 
 export default mission;

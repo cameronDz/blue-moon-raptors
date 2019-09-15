@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -100,7 +100,7 @@ class headerSection extends React.Component {
     const renderMobileMenu = rendeMenu(mobileMoreAnchorEl, isMobileMenuOpen);
 
     return (
-      <React.Fragment>
+      <Fragment>
         <AppBar className={classes.root} position="static">
           <Toolbar>
             <Typography className={classes.title} color="inherit" noWrap variant="h6">
@@ -119,7 +119,7 @@ class headerSection extends React.Component {
         </AppBar>
         {renderDesktopMenu}
         {renderMobileMenu}
-      </React.Fragment>);
+      </Fragment>);
   }
 }
 

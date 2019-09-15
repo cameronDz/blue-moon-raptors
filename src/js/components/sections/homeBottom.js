@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
@@ -19,11 +19,10 @@ const styles = {
   }
 };
 
-const homeBottomSection = props => {
-  const { classes } = props;
+const homeBottomSection = ({ classes }) => {
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Grid container spacing={0}>
         <Grid item xs={12} sm={3}></Grid>
         <Grid item xs={12} sm={6}>
@@ -54,7 +53,7 @@ const homeBottomSection = props => {
         </Grid>
         <Grid item xs={12} sm={1} md={2}></Grid>
       </Grid>
-    </React.Fragment>);
+    </Fragment>);
 };
 
 export default withStyles(styles)(homeBottomSection);

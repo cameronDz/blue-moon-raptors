@@ -26,8 +26,7 @@ const styles = {
   }
 };
 
-const circularImage = props => {
-  const { classes, details } = props;
+const circularImage = ({ classes, details }) => {
   const imageUrl = _config.assetBucket + details.imageUrl;
 
   return (

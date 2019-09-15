@@ -26,12 +26,9 @@ const birdCardSlider = () => {
   };
 
   return (
-    <React.Fragment>
-      <Grid container spacing={0}>
-        {renderCardArray()}
-      </Grid>
-    </React.Fragment>
-  );
+    <Grid container spacing={0}>
+      {renderCardArray()}
+    </Grid>);
 };
 
 export default birdCardSlider;

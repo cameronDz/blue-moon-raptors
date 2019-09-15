@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import * as _types from '../../../../data/programTypes.json';
 
 const programsList = () => {
@@ -14,12 +14,12 @@ const programsList = () => {
   };
 
   return(
-  <React.Fragment>
+  <Fragment>
     <div>Program Types:</div>
     <ul>
       {renderProgramList()}
     </ul>
-  </React.Fragment>)
+  </Fragment>)
 }
 
 export default programsList;

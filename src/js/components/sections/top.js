@@ -16,22 +16,19 @@ const styles = {
   }
 };
 
-const topSection = props => {
-  const { classes } = props;
+const topSection = ({ classes }) => {
   const imageUrl = _config.assetBucket + _homeImages.header.imageUrl;
   return (
-    <React.Fragment>
-      <Grid item container spacing={0}>
-        <Grid item xs={12}>
-          <div className={classes.title}>{_homeImages.header.title}</div>
-        </Grid>
-        <Grid item xs={12} sm={2}></Grid>
-        <Grid item xs={12} sm={8}>
-          <img className={classes.image} src={imageUrl}></img>
-        </Grid>
-        <Grid item xs={12} sm={2}></Grid>
+    <Grid item container spacing={0}>
+      <Grid item xs={12}>
+        <div className={classes.title}>{_homeImages.header.title}</div>
       </Grid>
-    </React.Fragment>)
+      <Grid item xs={12} sm={2}></Grid>
+      <Grid item xs={12} sm={8}>
+        <img className={classes.image} src={imageUrl}></img>
+      </Grid>
+      <Grid item xs={12} sm={2}></Grid>
+    </Grid>);
 };
 
 export default withStyles(styles)(topSection);

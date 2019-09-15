@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/home';
@@ -10,17 +10,15 @@ import SupportPage from './pages/support';
 
 const app = () => {
   return (
-    <Fragment>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/education' component={EducationPage} />
-        <Route exact path='/home' component={HomePage} />
-        <Route exact path='/mission' component={MissionPage} />
-        <Route exact path='/programs' component={ProgramsPage} />
-        <Route exact path='/raptors' component={RaptorsPage} />
-        <Route exact path='/support' component={SupportPage} />
-      </Switch>
-    </Fragment>);
+    <Switch>
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/education' component={EducationPage} />
+      <Route exact path='/home' component={HomePage} />
+      <Route exact path='/mission' component={MissionPage} />
+      <Route exact path='/programs' component={ProgramsPage} />
+      <Route exact path='/raptors' component={RaptorsPage} />
+      <Route exact path='/support' component={SupportPage} />
+    </Switch>);
 };
 
 export default app;

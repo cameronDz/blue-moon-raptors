@@ -16,7 +16,7 @@ const programImageSlider = () => {
     }
   }
 
-  return (<ImageGallery items={images} autoPlay={autoPlay} />);
+  return <ImageGallery items={images} autoPlay={autoPlay} />;
 };
 
 export default programImageSlider;

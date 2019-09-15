@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-09-15
+### Changed
+- Styling suggestions from linter
+
+### Fixed
+- Security issue with mixin-deep and set-value packages
+
 ## [0.2.0] - 2019-09-15
 ### Added
 - PropType declarations on components recieving props

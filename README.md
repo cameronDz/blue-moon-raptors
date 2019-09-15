@@ -12,8 +12,6 @@ Application is currently deployed to http://blue-moon-raptors.s3-website-us-east
 - [ ] Set up Mission Page styling
 - [ ] Set up raptor cards to be be psuedo slider/carousel
 - [ ] Set up Education Page w/styling
-- [ ] Add CHANGELOG
-- [ ] Add LICENSE
 - [ ] Set asset project up in source control and on a server
 - [ ] Add deployment details
 - [ ] Add project structure

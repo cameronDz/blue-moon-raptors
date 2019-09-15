@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import BirdCard from './birdCard';
 
@@ -13,14 +13,13 @@ const birdCardSlider = () => {
     return raptorArray.map((item, index) => {
       const imageUrl = assetBaseUrl + item.imageUrl;
       return (
-        <React.Fragment key={index}>
+        <Fragment key={index}>
           <Grid item xs={12} sm={1} md={1}></Grid>
           <Grid item xs={12} sm={4} md={2}>
             <BirdCard description={item.description} title={item.name} image={imageUrl} />
           </Grid>
           <Grid item xs={12} sm={1} md={1}></Grid>
-        </React.Fragment>
-      );
+        </Fragment>);
     });
   };
 

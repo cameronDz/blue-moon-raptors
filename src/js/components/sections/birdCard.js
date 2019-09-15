@@ -8,10 +8,11 @@ const styles = {
 };
 
 const birdCard = ({ classes, image, title }) => {
-  return (!!image && !!title) && (
+  const cardImage = !!image && <img className={classes.card} src={image} />;
+  return !!title && (
     <Fragment>
       <h1>{title}</h1>
-      <img className={classes.card} src={image} />
+      {cardImage}
     </Fragment>);
 };
 

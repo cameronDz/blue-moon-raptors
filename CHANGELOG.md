@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2019-09-15
+### Added
+- First tests, with dependencies, for components with ESlint setup to scan test as well
+
 ## [0.2.1] - 2019-09-15
 ### Changed
 - Styling suggestions from linter

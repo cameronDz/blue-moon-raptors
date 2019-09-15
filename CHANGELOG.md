@@ -14,8 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Deconstructing props in method params
+- Using path package in webpack config
 - Using Fragment instead of React.Fragment component
-- Organizing package.json file
+- Organizing package.json file keys
 
 ### Fixed
 - Styling/best practices issues detected by new linter

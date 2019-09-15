@@ -8,7 +8,7 @@ module.exports = {
     hot: true
   },
   devtool: 'inline-source-map',
-  entry: './src/js/index.js',
+  entry: resolve(__dirname, '..', './src/js/index.js'),
   mode: 'development',
   module: {
     rules: [{
@@ -41,13 +41,13 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: resolve('./dist'),
+    path: resolve(__dirname, '..', './dist'),
     publicPath: '/'
   },
   plugins: [
     new HtmlWebPackPlugin({
-      filename: './index.html',
-      template: './src/index.html'
+      filename: resolve(__dirname, '..', './dist/index.html'),
+      template: resolve(__dirname, '..', './src/index.html')
     }),
     new DefinePlugin({
       'process.env': {

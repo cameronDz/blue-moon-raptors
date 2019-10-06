@@ -66,8 +66,8 @@
   },
   "scripts": {
     "build": "webpack --mode production --config webpack/config.babel.js",
-    "lint": "eslint ./src/js ./webpack ./test",
-    "lint-fix": "eslint --fix ./src/js ./webpack ./test",
+    "lint": "eslint ./src/js/**/* ./webpack ./test",
+    "lint-fix": "eslint --fix ./src/js/**/* ./webpack ./test",
     "start": "webpack-dev-server --open --mode development --config webpack/config.babel.js",
     "test": "nyc mocha --require @babel/register --reqire jsdom-global/register"
   },

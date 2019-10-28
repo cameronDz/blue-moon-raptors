@@ -49,7 +49,8 @@
     "react-test-renderer": "^16.9.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.2"
   },
   "jest": {
     "setupFiles": [
@@ -65,10 +66,11 @@
     "url": "https://github.com/cameronDz/blue-moon-raptors.git"
   },
   "scripts": {
-    "build": "webpack --mode production --config webpack/config.babel.js",
+    "build-dev": "webpack --mode production --config webpack/dev.babel.js",
+    "build-prod": "webpack --mode production --config webpack/prod.babel.js",
     "lint": "eslint ./src/js/**/* ./webpack ./test",
     "lint-fix": "eslint --fix ./src/js/**/* ./webpack ./test",
-    "start": "webpack-dev-server --open --mode development --config webpack/config.babel.js",
+    "start": "webpack-dev-server --open --mode development --config webpack/dev.babel.js",
     "test": "nyc mocha --require @babel/register --reqire jsdom-global/register"
   },
   "version": "0.3.0"

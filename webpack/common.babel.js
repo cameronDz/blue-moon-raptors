@@ -1,13 +1,7 @@
 import HtmlWebPackPlugin from 'html-webpack-plugin';
-import { DefinePlugin } from 'webpack';
 import { resolve } from 'path';
 
 module.exports = {
-  devServer: {
-    contentBase: '.',
-    hot: true
-  },
-  devtool: 'inline-source-map',
   entry: resolve(__dirname, '..', './src/js/index.js'),
   mode: 'development',
   module: {
@@ -48,11 +42,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       filename: resolve(__dirname, '..', './dist/index.html'),
       template: resolve(__dirname, '..', './src/index.html')
-    }),
-    new DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development')
-      }
     })
   ]
 };

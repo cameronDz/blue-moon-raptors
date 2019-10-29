@@ -8,12 +8,12 @@ Application is currently deployed to http://blue-moon-raptors.s3-website-us-east
 - [ ] Set routing to include # so pages don't break on refresh; will go back to home
 - [ ] Add a StickyFooter component that stays on bottom of page
 - [ ] Set up raptor cards to include descriptions
-- [ ] Set webpack to minify bundle more
+- [x] Set webpack to minify bundle more
 - [ ] Set up Mission Page styling
 - [ ] Set up raptor cards to be be psuedo slider/carousel
 - [ ] Set up Education Page w/styling
 - [ ] Set asset project up in source control and on a server
-- [ ] Add deployment details
+- [x] Add deployment details
 - [ ] Add project structure
 - [ ] Move pages/ to ../containers/
 - [ ] Re-org /components/sections/

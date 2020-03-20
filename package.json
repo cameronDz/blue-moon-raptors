@@ -77,5 +77,5 @@
     "start": "webpack-dev-server --open --mode development --config webpack/dev.babel.js",
     "test": "nyc mocha --require @babel/register --reqire jsdom-global/register"
   },
-  "version": "0.4.1"
+  "version": "0.5.0"
 }

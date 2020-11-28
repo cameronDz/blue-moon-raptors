@@ -1,7 +1,8 @@
 {
   "author": {
     "email": "cameorndziurgot@gmail.com",
-    "name": "Cam Dziurgot"
+    "name": "Cam Dziurgot",
+    "url": "https://www.camdziurgot.io"
   },
   "description": "Website for Blue Moon Raptors organization, a rehabilitation organizaiton for birds of prey.",
   "devDependencies": {

@@ -34,7 +34,7 @@
     "jest": "^25.1.0",
     "jsdom": "^15.2.0",
     "jsdom-global": "^3.0.2",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.5",
     "mixin-deep": "^2.0.1",
     "mkdirp": "^1.0.3",
